@@ -10,7 +10,6 @@ terraform {
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
-  az "login"
 }
 
 resource "azurerm_resource_group" "example" {
