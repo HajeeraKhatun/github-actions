@@ -42,6 +42,13 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
+      
+    # Logging into Azure
+    - name: Azure login
+      uses: Azure/login@v2.3.0
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
