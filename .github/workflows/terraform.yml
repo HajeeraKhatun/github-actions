@@ -46,9 +46,7 @@ jobs:
       
     # Logging into Azure
     - name: Azure login
-      uses: Azure/login@v2.3.0
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+      run: az login
     
 
     # Generates an execution plan for Terraform
